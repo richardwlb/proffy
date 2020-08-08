@@ -38,10 +38,19 @@ export default class ClassesController {
       .join('users', 'classes.user_id', '=', 'users.id')
       .select(['classes.*', 'users.*']);
 
+      // const classes = await db('classes')
+      // .whereExists(function () {
+      //   this.select('class_schedule.*')
+      //     .from('class_schedule')
+      // })
+      // .join('users', 'classes.user_id', '=', 'users.id')
+      // .select(['classes.*', 'users.*']);
+
     return res.json(classes);
   }
 
   async create(req: Request, res: Response) {
+
     const {
       name,
       avatar,
