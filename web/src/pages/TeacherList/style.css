@@ -19,6 +19,10 @@
     margin-top: 1.4rem;
 }
 
+#search-teachers .select-block + .select-block{
+    margin-top: 0;
+}
+
 #search-teachers .input-block label{
     font-size: 1.4rem;
 }
